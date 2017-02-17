@@ -12,12 +12,14 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
 
 @Controller
 @EnableAutoConfiguration
+@EnableSwagger2
 public class GraphQLController {
 
 
