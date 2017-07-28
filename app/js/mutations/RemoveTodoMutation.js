@@ -52,12 +52,12 @@ export default class RemoveTodoMutation extends Relay.Mutation {
     var viewerPayload;
     if (this.props.viewer.todos) {
       viewerPayload = {id: this.props.viewer.id, todos: {}};
-      if (this.props.viewer.todos.completedCount != null) {
+      if (this.props.viewer.todos.completedCount !== null) {
         viewerPayload.todos.completedCount = this.props.todo.complete === true
           ? this.props.viewer.todos.completedCount - 1
           : this.props.viewer.todos.completedCount;
       }
-      if (this.props.viewer.todos.totalCount != null) {
+      if (this.props.viewer.todos.totalCount !== null) {
         viewerPayload.todos.totalCount = this.props.viewer.todos.totalCount - 1;
       }
     }
