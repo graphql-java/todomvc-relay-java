@@ -51,7 +51,7 @@ export default class ChangeTodoStatusMutation extends Relay.Mutation {
     var viewerPayload;
     if (this.props.viewer.todos) {
       viewerPayload = {id: this.props.viewer.id, todos: {}};
-      if (this.props.viewer.todos.completedCount != null) {
+      if (this.props.viewer.todos.completedCount !== null) {
         viewerPayload.todos.completedCount = this.props.complete
           ? this.props.viewer.todos.completedCount + 1
           : this.props.viewer.todos.completedCount - 1;

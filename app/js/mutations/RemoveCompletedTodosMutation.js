@@ -52,7 +52,7 @@ export default class RemoveCompletedTodosMutation extends Relay.Mutation {
     var newTotalCount;
     if (this.props.todos) {
       var {completedCount, totalCount} = this.props.todos;
-      if (completedCount != null && totalCount != null) {
+      if (completedCount !== null && totalCount !== null) {
         newTotalCount = totalCount - completedCount;
       }
       if (this.props.todos.edges) {
